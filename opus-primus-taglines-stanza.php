@@ -4,7 +4,7 @@ Plugin Name: Opus Primus Taglines
 Plugin URI: http://opusprimus.com/stanzas
 Description: Add a meta box for a tagline to various places in the administration panels
 Version: 1.0.4
-Text Domain: opusprimus-taglines
+Text Domain: opusprimus-taglines-stanza
 Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
 License: GNU General Public License v2
@@ -183,7 +183,7 @@ class OpusPrimusTagLines {
 
 			add_meta_box(
 				'opus_tagline',
-				apply_filters( 'opus_taglines_meta_box_title', sprintf( __( '%1$s Tagline', 'opus-primus' ), ucfirst( $post->post_type ) ) ),
+				apply_filters( 'opus_taglines_meta_box_title', sprintf( __( '%1$s Tagline', 'opusprimus-taglines-stanza' ), ucfirst( $post->post_type ) ) ),
 				array( $this, 'tagline_callback' ),
 				$post->post_type,
 				$context,
@@ -283,7 +283,7 @@ class OpusPrimusTagLines {
 
 		/** Create and display input for tagline text field */
 		echo '<label for="tagline_text_field">';
-		echo apply_filters( 'opus_taglines_text_field_description', sprintf( __( 'Add custom tagline to this %1$s: ', 'opus-primus' ), $post->post_type ) );
+		echo apply_filters( 'opus_taglines_text_field_description', sprintf( __( 'Add custom tagline to this %1$s: ', 'opusprimus-taglines-stanza' ), $post->post_type ) );
 		echo '</label>';
 		echo '<input type="text" id="tagline_text_field" name="tagline_text_field" value="' . get_post_meta( $post->ID, 'tagline_text_field', true ) . '" size="100%" />';
 
