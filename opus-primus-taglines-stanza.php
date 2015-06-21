@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Opus Primus Taglines
-Plugin URI: http://opusprimus.com/stanzas
+Plugin URI: http://opusprimus.com/features/stanzas/taglines/
 Description: Add a meta box for a tagline to various places in the administration panels
 Version: 1.0.4
 Text Domain: opusprimus-taglines-stanza
